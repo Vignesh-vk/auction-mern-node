@@ -34,6 +34,10 @@ app.use(
   })
 );
 
+app.get('/', (req, res) => {
+  res.send('Welcome to Auction management!');
+});
+
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/auctionitem", auctionItemRouter);
 app.use("/api/v1/bid", bidRouter);
